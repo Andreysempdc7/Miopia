@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Miopia e Teste de Miopia</title> 
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; /* Azul claro */
+            color: #004d40; /* Texto em um tom de azul escuro */
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            color: #00796b; /* Tom de azul mais escuro para os subtítulos */
+        }
+        p {
+            line-height: 1.6; /* Melhor legibilidade */
+        }
+        .test-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%; /* Largura máxima da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+        .question {
+            margin: 20px 0;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #00796b; /* Cor do botão */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004d40; /* Cor do botão ao passar o mouse */
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d32f2f; /* Vermelho para o resultado */
+        }
+        .video {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%; /* Largura máxima do vídeo */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+        .general-info {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #b2dfdb; /* Azul claro para a seção de informações gerais */
+            border-radius: 8px;
+        }
+        .developer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 16px;
+            color: #00796b; /* Cor para o texto do desenvolvedor */
+        }
+        .pdc {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px; /* Tamanho igual ao do desenvolvedor */
+            color: #00796b; /* Cor para o texto */
+        }
+        .thumbs-up-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 30%; /* Largura máxima da imagem do joinha */
+            height: auto; /* Altura automática para manter a proporção */
+        }
+    </style> 
+ </head> 
+ <body> 
+  <h1>Miopia</h1> 
+  <h2>O que é Miopia?</h2> 
+  <p>A miopia é um erro refrativo comum que afeta a capacidade de ver objetos distantes claramente. Isso ocorre quando o olho é mais longo do que o normal ou a córnea é muito curva, fazendo com que a luz que entra no olho não se concentre corretamente na retina.</p> 
+  <h2>Sintomas e Diagnóstico</h2> 
+  <p>Os sintomas da miopia podem incluir dificuldade em enxergar sinais distantes, dor de cabeça após atividades visuais prolongadas, e necessidade de apertar os olhos para ver melhor. O diagnóstico é feito por meio de um exame oftalmológico, onde o médico avaliará a acuidade visual e a saúde ocular geral.</p> 
+  <h2>Tratamento</h2> 
+  <p>O tratamento da miopia pode incluir o uso de óculos ou lentes de contato para corrigir a visão. Em alguns casos, procedimentos cirúrgicos, como a cirurgia a laser, podem ser recomendados.</p> 
+  <h2>Vídeo sobre Miopia</h2> <iframe class="video" src="https://www.youtube.com/embed/GZnFkkaAAzM" frameborder="0" allowfullscreen></iframe> 
+  <h2>Teste de Miopia</h2> 
+
+  <form id="testForm"> 
+   <div class="question"> <label>1. Você tem dificuldade para enxergar objetos distantes?</label>
+    <br> 
+    <input type="radio" name="question1" value="sim"> Sim 
+    <input type="radio" name="question1" value="nao"> Não 
+   </div> 
+   <div class="question"> <label>2. Você sente dor de cabeça após atividades que exigem foco próximo, como ler?</label>
+    <br> 
+    <input type="radio" name="question2" value="sim"> Sim 
+    <input type="radio" name="question2" value="nao"> Não 
+   </div> 
+   <div class="question"> <label>3. Você frequentemente aperta os olhos para ver melhor?</label>
+    <br> 
+    <input type="radio" name="question3" value="sim"> Sim 
+    <input type="radio" name="question3" value="nao"> Não 
+   </div> 
+   <div class="question"> <label>4. Você tem histórico familiar de problemas de visão, como miopia?</label>
+    <br> 
+    <input type="radio" name="question4" value="sim"> Sim 
+    <input type="radio" name="question4" value="nao"> Não 
+   </div> <button type="button" onclick="calculateResult()">Enviar Respostas</button> 
+  </form> 
+  <div class="result" id="result"></div> 
+  <div class="general-info"> 
+   <h2>Informações Gerais sobre Miopia</h2> 
+   <p>A miopia, do grego "myops", que significa "aquele que fecha os olhos", é um distúrbio visual que tem sido documentado desde a antiguidade. Acredita-se que o conceito de miopia começou a ser reconhecido na Grécia antiga, embora os tratamentos só tenham evoluído significativamente nos últimos séculos. A condição é causada por uma combinação de fatores genéticos e ambientais, como o uso excessivo de dispositivos eletrônicos e a falta de exposição à luz natural.</p> 
+   <p>Embora a miopia possa se manifestar em qualquer idade, é mais comum durante a infância e adolescência, podendo se agravar com o tempo. Estudos indicam que a prevalência da miopia está aumentando globalmente, especialmente em áreas urbanas. A educação, as atividades próximas e o estilo de vida são fatores que influenciam o desenvolvimento da miopia.</p> 
+   <p>Além das intervenções ópticas, como óculos e lentes de contato, existem pesquisas em andamento sobre métodos de controle da progressão da miopia, incluindo o uso de lentes de contato especiais e tratamentos farmacológicos. O acompanhamento regular com um oftalmologista é essencial para a saúde ocular e para a prevenção de complicações futuras.</p> 
+  </div> 
+  <div class="developer"> 
+   <p>Desenvolvido por mim, Andrey, da turma 324.</p> 
+  </div> 
+  <div class="pdc"> 
+   <p>Eu não tenho PDC.</p> 
+  </div> 
+  <img src="https://via.placeholder.com/100x100.png?text=Joinha" alt="Pessoa mostrando joinha" class="thumbs-up-image"> 
+  <script>
+        function calculateResult() {
+            let score = 0;
+            const questions = document.querySelectorAll('.question input:checked');
+
+            questions.forEach(question => {
+                if (question.value === 'sim') {
+                    score++;
+                }
+            });
+
+            let resultMessage = '';
+
+            if (score === 0) {
+                resultMessage = 'Você não apresenta sinais de miopia. Mantenha seus hábitos de saúde ocular!';
+            } else if (score <= 2) {
+                resultMessage = 'Você pode ter alguns sinais de miopia. Considere fazer um exame de visão.';
+            } else {
+                resultMessage = 'Você apresenta vários sinais de miopia. É altamente recomendável consultar um oftalmologista.';
+            }
+
+            document.getElementById('result').innerText = resultMessage;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script> 
+ 
+</body></html>
